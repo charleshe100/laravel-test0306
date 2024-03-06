@@ -18,7 +18,7 @@ yarn-error.log
 /.idea
 /.vscode
 
-# 網上下載的 gitignore
+
 /vendor/
 node_modules/
 npm-debug.log
