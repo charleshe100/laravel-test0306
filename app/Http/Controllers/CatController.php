@@ -11,11 +11,6 @@ class CatController extends Controller
      */
     public function index()
     {
-        // dd('hello cat index');
-        $url = asset('css/style.css');
-        $url = asset('css/bootstrap.min.css');
-        $url = asset('js/bootstrap.min.js');
-        // dd($url);
         return view('cat.index');
     }
 
@@ -32,7 +27,11 @@ class CatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        // dd('Hollo store');
+        $input = $request->except('_token');
+        //except('_token')是排除了名為 _token 的項目，通常這是在表單驗證時使用的 CSRF token。這麼做可以避免 CSRF 攻擊。
+        return redirect()->route('cats.index');
     }
 
     /**
@@ -48,7 +47,7 @@ class CatController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        dd("Hello $id");
     }
 
     /**
@@ -64,7 +63,7 @@ class CatController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        dd("delete $id");
     }
 
     public function excel(){

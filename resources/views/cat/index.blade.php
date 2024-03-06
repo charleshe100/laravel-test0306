@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Cat List</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
@@ -17,8 +17,6 @@
 </head>
 
 <body>
-    <h1>Hello Cat</h1>
-
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <ul class="navbar-nav">
@@ -52,32 +50,24 @@
                     <td>1</td>
                     <td>Amy</td>
                     <td>
-                        <a href="http://">Edit</a> &nbsp;&nbsp;&nbsp;
-                        <a href="http://">Del</a>
+                        <a href="{{route('cats.edit',['cat' => 1])}}">Edit</a> &nbsp;&nbsp;&nbsp;
+                        <a href="">Del</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>Amy</td>
+                    <td>2</td>
+                    <td>Bob</td>
                     <td>
-                        <a href="http://">Edit</a> &nbsp;&nbsp;&nbsp;
-                        <a href="http://">Del</a>
+                        <a href="{{route('cats.edit',['cat' => 2])}}">Edit</a> &nbsp;&nbsp;&nbsp;
+                        <a href="{{route('cats.destroy',['cat' => 2])}}">Del</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>Amy</td>
+                    <td>3</td>
+                    <td>Cat</td>
                     <td>
-                        <a href="http://">Edit</a> &nbsp;&nbsp;&nbsp;
-                        <a href="http://">Del</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Amy</td>
-                    <td>
-                        <a href="http://">Edit</a> &nbsp;&nbsp;&nbsp;
-                        <a href="http://">Del</a>
+                        <a href="{{route('cats.edit',['cat' => 3])}}">Edit</a> &nbsp;&nbsp;&nbsp;
+                        <a href="{{route('cats.destroy',['cat' => 3])}}">Del</a>
                     </td>
                 </tr>
             </tbody>

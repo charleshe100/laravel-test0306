@@ -27,3 +27,8 @@ Route::resource('cats', CatController::class);
 // dogs 小狗
 Route::resource('dogs', DogController::class);
 
+//child
+Route::get('/child', function () {
+    return view('child');
+});
+
